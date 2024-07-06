@@ -15,42 +15,36 @@
 * JUnit 5
 
 ## Validation Criteria
-    Username:
+##### Username:
+* Not empty
+* Minimum 4 characters
+##### Email:
 
-    * Not empty
-    * Minimum 4 characters
-#
-    Email:
+  * Not empty
+  * Valid email address format
+##### Password:
+  * Not empty
+  * At least 8 characters, at least 1 uppercase letter, at least 1 special character (e.g., !@#$%^&*)
+  * At least 1 number
 
-    * Not empty
-    * Valid email address format
-#
-    Password:
-
-    * Not empty
-    * At least 8 characters, at least 1 uppercase letter, at least 1 special character (e.g., !@#$%^&*)
-    * At least 1 number
-#
-
-    Date of Birth:
-
-    * Not empty
-    * Should be 16 years or older
+##### Date of Birth:
+ * Not empty
+ * Should be 16 years or older
 
 ## JWT Generation and Verification
-### JWT Generation
+ * ### JWT Generation
 
-* The JwtUtil.generateJwtToken method generates a signed JWT token with the username, email, and password as claims.
-The token is signed using a secret key.
+   * The JwtUtil.generateJwtToken method generates a signed JWT token with the username, email, and password as claims.
+   The token is signed using a secret key.
 
-### JWT Verification
-* The JwtUtil.verifyJwtToken method verifies a given JWT token and checks if the username, email, and password in the token match the expected values. 
-It also checks if the token has expired. The expiration duration can be adjusted according to project specification requirement.
+ * ### JWT Verification
+   * The JwtUtil.verifyJwtToken method verifies a given JWT token and checks if the username, email, and password in the token match the expected values. 
+   It also checks if the token has expired. The expiration duration can be adjusted according to project specification requirement.
 
-### JUnit Test Cases
-* The JwtUtilTest class includes JUnit test cases to test the token verification method for valid and invalid tokens. The tests cover the following scenarios:
-###### Valid JWT token
-###### Invalid JWT token
+ * ### JUnit Test Cases
+   * The JwtUtilTest class includes JUnit test cases to test the token verification method for valid and invalid tokens. The tests cover the following scenarios:
+      ###### Valid JWT token
+      ###### Invalid JWT token
 
 
 ## Usage Instructions
