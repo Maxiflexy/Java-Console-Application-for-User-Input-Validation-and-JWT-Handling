@@ -50,6 +50,7 @@ public class UserInputValidator {
                 errors.append("Date of Birth: invalid date format (yyyy-MM-dd)\n");
             }
         }
+
     }
 
 }

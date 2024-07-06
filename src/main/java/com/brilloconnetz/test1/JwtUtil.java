@@ -40,7 +40,6 @@ public class JwtUtil {
                 return "Verification fails: Token expired";
             }
 
-
             String username = claims.getSubject();
             String email = claims.get("email", String.class);
             String password = claims.get("password", String.class);
@@ -66,5 +65,6 @@ public class JwtUtil {
         } catch (Exception e) {
             return "Verification fails";
         }
+
     }
 }
