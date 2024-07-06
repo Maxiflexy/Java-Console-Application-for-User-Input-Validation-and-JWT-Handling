@@ -33,14 +33,14 @@ public class JwtUtil {
 
             Claims claims = jws.getBody();
 
-            // Example: Check if the token has expired
+
             Date expiration = claims.getExpiration();
 
             if (expiration != null && expiration.before(new Date())) {
                 return "Verification fails: Token expired";
             }
 
-            // Validate email and username as needed
+
             String username = claims.getSubject();
             String email = claims.get("email", String.class);
             String password = claims.get("password", String.class);
@@ -49,7 +49,6 @@ public class JwtUtil {
                 return "Verification fails: Missing username or email";
             }
 
-            // Example: Additional validation logic based on expected values
             if (!username.equals(expectedUsername)) {
                 return "Verification fails: Username does not match expected value";
             }

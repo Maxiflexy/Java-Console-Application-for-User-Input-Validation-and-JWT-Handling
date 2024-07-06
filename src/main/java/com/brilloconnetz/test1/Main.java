@@ -40,7 +40,6 @@ public class Main {
             System.out.println("All inputs are valid.");
             System.out.println("Generated JWT: " + jwt);
 
-            // Verify the generated JWT
             String verificationResult = verifyJwtToken(jwt, username,email, password);
             System.out.println("Verification Result: " + verificationResult);
         } else {
