@@ -64,5 +64,5 @@ The application can also verify a given JWT token and output whether the verific
 ### Contact
 If you have any questions or need further assistance, please contact me at:
 
-* Email:  onyekachimaximillian@gmail.com
+* Email:  onyemax247@gmail.com
 * GitHub: maxiflexy
